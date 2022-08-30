@@ -1,0 +1,68 @@
+html {
+    line-height: 1.6;
+}
+.mt-0 {
+    margin-top: 0;
+    font-size:14px;
+}
+.center_text {
+    text-align: center;
+    font-size:30px;
+    
+}
+
+.font12 {
+    font-size: 12px;
+}
+
+div {
+    box-sizing: border-box;    
+}
+
+.title {
+    font-size: 18px;
+    margin-top: 10
+
+}
+
+.textbox {
+    width: 100%;
+    padding: 10px;
+}
+
+.container {
+    width: 900px;
+    margin-top: 30px;
+    padding: 5px;
+    margin-left: 100px;
+    margin-right: auto;
+}
+
+.item {
+    display: inline-block;
+    width: 300px;
+    margin-right: 20px;
+}
+
+.container img {
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+   
+}
+
+.textbox h3 {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+
+.ls {
+    letter-spacing: -2px;
+    font-size:11px;
+}
+
+body {
+    margin: 0;
+}
