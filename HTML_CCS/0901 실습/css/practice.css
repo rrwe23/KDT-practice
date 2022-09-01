@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR&display=swap');
+
+
+body{
+    height:10000px;
+    background-color: aqua;
+    font-family: 'Jua', sans-serif;
+    
+
+}
+
+
+.nav{
+    display:flex;
+    justify-content: space-between;
+    background-color:white;
+    position:sticky;
+    top:0px;
+    height:50px;
+    align-items: center;
+    
+}
+.nav-list{
+    display:flex;
+    list-style:none;
+    padding:2;
+    margin:0;
+    align-items: center;
+}
+
+.nav-link:visited{
+    color:black;
+}
+.nav-link{
+    text-decoration:none;
+}
+.nav-link:hover{
+    color:skyblue;
+    background-color: black;
+    border-radius: 3px;
+    
+
+}
+.nav-item{
+    margin:0 10px;
+}
+
+
+
