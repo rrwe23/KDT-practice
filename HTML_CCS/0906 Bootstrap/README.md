@@ -1,4 +1,4 @@
-<img src="![ezgif com-gif-maker](https://user-images.githubusercontent.com/70432152/188683897-9a6e4692-5568-46ea-894b-100a12d6ba66.gif)"
+<img src="![ezgif com-gif-maker](https://user-images.githubusercontent.com/70432152/188683897-9a6e4692-5568-46ea-894b-100a12d6ba66.gif)">
 
 ## 🎉 Practice 후기
 
