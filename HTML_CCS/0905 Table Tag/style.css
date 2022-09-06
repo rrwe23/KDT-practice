@@ -1,0 +1,9 @@
+.nav{
+    height:70px;
+}
+
+
+.banner{
+    height:500px;
+    background-image: url(./commerce/assets/apparel.jpeg)
+}
