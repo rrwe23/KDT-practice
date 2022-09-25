@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today-dinner</title>
+</head>
+<style>
+    .title{
+        
+        padding-top: 8rem;
+        display:flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        
+        
+        
+        
+        
+    }
+    .food{
+        color:red;
+    }
+    .foodimage{
+        width:auto;
+        height:auto;
+       margin-left: 10rem;
+       display:flex;
+       padding:0%;
+        
+        
+        
+    }
+
+</style>
+<body>
+    <div class="title">
+    <h2>오늘 저녁 메뉴는 </h2> <h1 class="food">{{ menu.name }}</h1> <h2> 입니다!</h2>
+    <img src="{{menu.src}}" alt="">
+    </div>
+
+    
+    <!-- <p>{{menu}}</p> 
+    {% for menu in menus %}
+     <span>{{menu}}</span> 
+    {% endfor %} -->
+
+       
+    
+</body>
+</html>
