@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card">
+    <div class="card-header">
+        Featured
+    </div>
+    <div class="card-body text-center">
+        <h5 class="card-title">계산 결과</h5>
+        <div class="align-items-center">
+            {{num1}} + {{num2}} = {{sum}}
+
+        </div>
+        <div class="align-items-center">
+            {{num1}} - {{num2}} = {{sub}}
+
+        </div>
+
+        <div class="align-items-center">
+            {{num1}} * {{num2}} = {{mul}}
+
+        </div>
+
+        <div class="align-items-center">
+            {{num1}} / {{num2}} = {{div}}
+
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}
