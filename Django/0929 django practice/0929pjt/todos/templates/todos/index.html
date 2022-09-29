@@ -1,0 +1,125 @@
+{% extends 'todos/base.html' %}
+{% block content %}
+
+<body>
+    <div class="container my-5" style="text-align: center;margin: 0 auto;">
+
+        <h3>일정 추가하기</h3>
+        <form action="{% url 'todos:create' %}">
+            <div class="input-group mb-3">
+                <span class="input-group-text">할 일</span>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="" placeholder="Username" name="content" maxlength="80">
+
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">우선 순위</span>
+                <div class="form-floating">
+
+                    <select name="priority" class="form-control">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">마감 기한</span>
+                <div class="form-floating">
+                    <input type="date" class="form-control" id="" placeholder="Username" ,name="deadline">
+
+                </div>
+            </div>
+            <button type="submit" class="btn btn-outline-primary form-control" value="할 일 추가">할 일 추가</button>
+
+        </form>
+
+        <div class="under container">
+            <div class="row">
+                <div class="text bar" style="display:flex;justify-content: space-between; font-weight: bolder;">
+                    <div>우선 순위</div>
+                    <div>할 일</div>
+                    <div>생성 날짜</div>
+                    <div>마감 기한</div>
+                    <div>진행 상태</div>
+                    <div>상태 변경</div>
+                    <div>삭제</div>
+                </div>
+
+                <hr>
+                <div class="target col-12" style="display:flex;justify-content: space-between;">
+                    <!-- DTL for문 사용법-->
+                    {% for todo in todos %}
+                    <div>{{ todo.priority }}</div>
+                    <div>{{ todo.content }}</div>
+                    <div>{{ todo.created_at }}</div>
+                    <div>{{ todo.deadline }}</div>
+                    <div>{{ todo.completed }}</div>
+                    <div>
+                        <ul>
+                            {% for todo in todos %}
+
+                            {% if todo.completed %}
+                            <del>
+                                <!-- {{ todo.completed }} -->
+                                <a href="{% url 'todos:update' todo.pk %}">[수정]</a>
+
+                            </del>
+                            {% else %}
+                            <!-- {{ todo.completed }} -->
+                            <a href="{% url 'todos:update' todo.pk %}">[수정]</a>
+
+                            {% endif %}
+
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <a href="{% url 'todos:delete' todo.pk %}" class="col-1.71">삭제</a>
+
+
+                    {% endfor %}
+
+
+                    <!-- {{ todos }} -->
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+            </div>
+            <!-- 
+            <ul>
+                {% for todo in todos %}
+                <li>
+                    {% if todo.completed %}
+                    <del>
+                        {{ todo.pk }} - {{todo.content }} - {{ todo.completed }}
+                        <a href="{% url 'todos:update' todo.pk %}">[수정]</a>
+
+                    </del>
+                    {% else %}
+                    {{ todo.pk }} - {{todo.content }} - {{ todo.completed }}
+                    -<a href="{% url 'todos:update' todo.pk %}">[수정]</a>
+
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul> -->
+
+
+        </div>
+</body>
+
+{% endblock %}
