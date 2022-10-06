@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form action = {% url 'articles:create' %}>
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+      
+    </div>
+    <div class="mb-3">
+      <label for="summary" class="form-label">Summary</label>
+      <input type="text" class="form-control" id="summary" name="summary" placeholder="Summary">
+    </div>
+
+    <div class="mb-3">
+        <label for="running_time" class="form-label">Running time</label>
+        <input type="number" class="form-control" id="running_time" name="running_time" placeholder="Running time">
+    </div>
+   
+    <button type="submit" class="btn btn-primary">추가</button>
+  </form>
+
+
+
+
+{% endblock %}

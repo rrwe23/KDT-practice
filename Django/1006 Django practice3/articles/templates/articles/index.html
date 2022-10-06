@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<table class="table">
+    
+    <thead>
+        <tr>
+            <th scope="col">PK</th>
+            <th scope="col">영화 제목</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        {% for article in articles %}
+        <tr>
+            <th>{{article.pk}}</th>
+            <th>
+                <a href="{% url 'articles:detail' article.pk %}" type='submit'>{{article.title}}</a>
+            </th>
+        <hr>
+        {% endfor %}
+    </tbody>
+    
+
+    
+    
+
+
+{% endblock %}
