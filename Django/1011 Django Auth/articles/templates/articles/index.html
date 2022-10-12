@@ -1,0 +1,20 @@
+<!-- index.html 에 이미지(static file) 1장 넣어보기 -->
+<!-- static 템플릿 태그 사용함으로써 지정된 상대경로에 대한 URL 빌드 -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<h1>안녕!</h1>
+<img src="{% static 'wow.jpg' %}" alt="img">
+
+<a href="{% url 'articles:create' %}">새글쓰기</a>
+{% for article in articles %}
+<h3><a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a></h3>
+<p>{{ article.created_at }} | {{ article.updated_at }}</p>
+<hr>
+{% endfor %}
+
+{% endblock %}
