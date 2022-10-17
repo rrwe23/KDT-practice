@@ -1,3 +1,5 @@
+
+
 {% extends 'base.html' %}
 
 {% block content %}
@@ -5,11 +7,14 @@
 {% load django_bootstrap5 %}
 {% bootstrap_css %}
 {% bootstrap_javascript %}
-  <h1>회원가입</h1>
-  <form action="" method="POST">
+
+  <div class="row mt-5">
+    <h1 class="text-center">회원가입</h1>
+    <form action="" method="POST" class="my-3">
       {% csrf_token %}
       {% bootstrap_form form %}
-      {% bootstrap_button button_type="submit" content="OK" %}
-  </form>
+      {% bootstrap_button button_type="submit" button_class="btn-primary" content="가입하기" %}
+    </form>
+  </div>
 
 {% endblock content %}
