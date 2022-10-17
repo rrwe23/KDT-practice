@@ -200,3 +200,25 @@ SECRET_KEY = get_secret("SECRET_KEY")
 
 secrets.json
 ```
+
+
+
+1011
+
+SECRET_KEY = 'django-insecure-ee54do=4n!@572xelgdi4wzj@r9@(b$o)!n&wrihau(f^qp3q8'```
+
+
+
+1005
+
+SECRET_KEY = "django-insecure-4!ln%x*nqy#d1ye%ovgch@f41wraor+al6%pfr0$d^i0kc-0)4"
+
+
+
+1013
+
+{
+
+  "SECRET_KEY": "<django-insecure-wy@vmci9c!vwuqo9qn850svm%mo0zti$)8p((f-_!&rwg^9&%u>"
+
+}
