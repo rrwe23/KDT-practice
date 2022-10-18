@@ -1,17 +1,15 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block content %} {% load django_bootstrap5 %} {%
+bootstrap_css %} {% bootstrap_javascript %}
 
-
-{% block content %}
-{% load django_bootstrap5 %}
-{% bootstrap_css %}
-{% bootstrap_javascript %}
-
-<h1>글쓰기<h1>
-    <form action="" method="POST" enctype="multipart/form-data" >
-        {% csrf_token %}
-        {% bootstrap_form article_form %}
-        {% bootstrap_button content="글쓰기" button_type="submit" button_class="btn-secondary col-3" %}
-
+<h1>
+  글쓰기
+  <h1>
+    <form action="" method="POST" enctype="multipart/form-data">
+      {% csrf_token %} {% bootstrap_form article_form %} {% bootstrap_button
+      content="글쓰기" button_type="submit" button_class="btn-secondary col-3"
+      %}
     </form>
 
-{% endblock %}
+    {% endblock %}
+  </h1>
+</h1>

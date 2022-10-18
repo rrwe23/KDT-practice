@@ -57,3 +57,5 @@ def delete(request, pk):
     Article.objects.get(pk=pk).delete()
     return redirect('articles:index')
 
+
+
