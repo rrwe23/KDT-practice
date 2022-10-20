@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+{% load django_bootstrap5 %}
+{% block content %}
+ {% load static %}
+
+<h1>안녕!</h1>
+{% comment %} <img src="{% static 'longcat.jpg' %}" alt="img" /> {% endcomment %}
+
+
+  <div class="row">
+    {% for article in articles %}
+    <div class="col-4">
+      <div class="card">
+        <img src="{{ article.image.url }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ article.title }}</h5>
+            <a href="{% url 'articles:detail' article.pk %}" class="btn btn-primary">더보기</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+{% endblock %}
