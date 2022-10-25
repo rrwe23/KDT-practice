@@ -44,6 +44,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'django_extensions',
     'django_cleanup.apps.CleanupConfig',
     'imagekit',
     'accounts',
