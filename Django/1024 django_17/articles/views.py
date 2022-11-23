@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Article
 from .forms import ArticleForm, CommentForm
 from django.views.decorators.http import require_POST, require_safe
+from django.http import JsonResponse
 
 @require_safe
 def index(request):
@@ -91,9 +92,14 @@ def like(request,pk):
     # if article.like_users.filter(id=request.user.id).exists():
     if request.user in article.like_users.all():
         article.like_users.remove(request.user)
+        is_liked = False
     else:
         article.like_users.add(request.user)
+        is_liked = True
 
-    return redirect('articles:detail',pk)
+    context = {'isLiked': is_liked, 
+               'likeCount': article.like_users.count()
+               }
+    return JsonResponse(context)
 
     
