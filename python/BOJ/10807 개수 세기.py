@@ -1,6 +1,6 @@
 # https://www.acmicpc.net/problem/10807
 
-_list = []
+
 cnt = 0
 N = int(input())
 
