@@ -9,12 +9,25 @@
 
 // querySelector = Element를 CSS방식으로 검색가능
 
-const title = document.querySelector(".hello h1");
- // 여러개가 존재해도 하나만 가져옴
+// const title = document.querySelector(".hello h1");
+//  // 여러개가 존재해도 하나만 가져옴
 
 
-console.log(title)
+// console.log(title)
 
-const title2 = document.querySelectorAll(".hello h1");
-// 여러개 다 가져옴
-console.log(title2)
+// const title2 = document.querySelectorAll(".hello h1");
+// // 여러개 다 가져옴
+// console.log(title2)
+
+const title = document.querySelector("div.hello:first-child h1");
+// console.log(title)
+// title.innerText = "Hello";
+
+console.dir(title);
+title.style.color="blue";
+function handleTitleClick() {
+    // console.log("title was clicked!");
+    title.style.color = "red"
+}
+
+title.addEventListener("click",handleTitleClick);
