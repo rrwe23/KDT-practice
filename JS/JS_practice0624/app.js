@@ -30,4 +30,32 @@ function handleTitleClick() {
     title.style.color = "red"
 }
 
+function handleMouseEnter() {
+    title.innerText = "Mouse is here"
+}
+
+function handleMouseLeave() {
+    title.innerText = "Mouse is gone"
+}
+function handleWindowResize() {
+    document.body.style.backgroundColor = "blue";
+}
+
+function handleWindowCopy() {
+    alert("훔쳐가지마!")
+}
+
+function noWifi() {
+    alert("인터넷 안됨 ㅜㅜ")
+}
+function haveWifi() {
+    alert("이제 됨 ㅎㅎ")
+}
 title.addEventListener("click",handleTitleClick);
+title.addEventListener("mouseenter",handleMouseEnter);
+title.addEventListener("mouseleave",handleMouseLeave);
+
+window.addEventListener("resize",handleWindowResize);
+window.addEventListener("copy",handleWindowCopy);
+window.addEventListener("offline",noWifi);
+window.addEventListener("online",haveWifi);
